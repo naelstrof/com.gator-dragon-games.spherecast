@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: SphereCastPass
+  m_EditorClassIdentifier: AmplifyShaderEditor::AmplifyShaderEditor.AmplifyShaderFunction
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.9.15\n// Available at
+    the Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19915\n{\"type\":\"AmplifyShaderEditor.NormalVertexDataNode,
+    AmplifyShaderEditor\",\"id\":3,\"pos\":[-912,-16],\"params\":[\"Inherit\",\"False\",\"0\",\"5\",\"FLOAT3\",\"0\",\"FLOAT\",\"1\",\"FLOAT\",\"2\",\"FLOAT\",\"3\",\"FLOAT\",\"4\"]}\n{\"type\":\"AmplifyShaderEditor.PosVertexDataNode,
+    AmplifyShaderEditor\",\"id\":4,\"pos\":[-912,-160],\"params\":[\"Inherit\",\"False\",\"0\",\"0\",\"5\",\"FLOAT3\",\"0\",\"FLOAT\",\"1\",\"FLOAT\",\"2\",\"FLOAT\",\"3\",\"FLOAT\",\"4\"]}\n{\"type\":\"AmplifyShaderEditor.FunctionInput,
+    AmplifyShaderEditor\",\"id\":1,\"pos\":[-640,-160],\"params\":[\"Inherit\",\"False\",\"Vertex
+    Position\",\"3\",\"0\",\"False\",\"\",\"\",\"\",\"\",\"False\",\"1\",\"0\",\"FLOAT3\",\"0,0,0\",\"False\",\"1\",\"FLOAT3\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.FunctionInput,
+    AmplifyShaderEditor\",\"id\":2,\"pos\":[-640,-16],\"params\":[\"Inherit\",\"False\",\"Vertex
+    Normal\",\"3\",\"1\",\"False\",\"\",\"\",\"\",\"\",\"False\",\"1\",\"0\",\"FLOAT3\",\"0,0,0\",\"False\",\"1\",\"FLOAT3\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.StaticSwitch,
+    AmplifyShaderEditor\",\"id\":9,\"pos\":[0,-224],\"params\":[\"Inherit\",\"False\",\"Property\",\"_SPHERE_CAST_ON\",\"SPHERE_CAST_ON\",\"0\",\"0\",\"Create\",\"True\",\"0\",\"0\",\"0\",\"True\",\"0\",\"False\",\"\",\"1\",\"0\",\"0\",\"False\",\"\",\"Toggle\",\"2\",\"Key0\",\"Key1\",\"Create\",\"False\",\"True\",\"All\",\"False\",\"False\",\"True\",\"False\",\"0\",\"9\",\"1\",\"FLOAT3\",\"0,0,0\",\"False\",\"0\",\"FLOAT3\",\"0,0,0\",\"False\",\"2\",\"FLOAT3\",\"0,0,0\",\"False\",\"3\",\"FLOAT3\",\"0,0,0\",\"False\",\"4\",\"FLOAT3\",\"0,0,0\",\"False\",\"5\",\"FLOAT3\",\"0,0,0\",\"False\",\"6\",\"FLOAT3\",\"0,0,0\",\"False\",\"7\",\"FLOAT3\",\"0,0,0\",\"False\",\"8\",\"FLOAT3\",\"0,0,0\",\"False\",\"1\",\"FLOAT3\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.StaticSwitch,
+    AmplifyShaderEditor\",\"id\":10,\"pos\":[16,-16],\"params\":[\"Inherit\",\"False\",\"Property\",\"\",\"\",\"1\",\"0\",\"Create\",\"True\",\"0\",\"0\",\"0\",\"False\",\"0\",\"False\",\"\",\"0\",\"0\",\"0\",\"True\",\"\",\"Toggle\",\"2\",\"Key0\",\"Key1\",\"Reference\",\"9\",\"True\",\"True\",\"All\",\"False\",\"False\",\"True\",\"False\",\"0\",\"9\",\"1\",\"FLOAT3\",\"0,0,0\",\"False\",\"0\",\"FLOAT3\",\"0,0,0\",\"False\",\"2\",\"FLOAT3\",\"0,0,0\",\"False\",\"3\",\"FLOAT3\",\"0,0,0\",\"False\",\"4\",\"FLOAT3\",\"0,0,0\",\"False\",\"5\",\"FLOAT3\",\"0,0,0\",\"False\",\"6\",\"FLOAT3\",\"0,0,0\",\"False\",\"7\",\"FLOAT3\",\"0,0,0\",\"False\",\"8\",\"FLOAT3\",\"0,0,0\",\"False\",\"1\",\"FLOAT3\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.WorldToObjectMatrix,
+    AmplifyShaderEditor\",\"id\":6,\"pos\":[-640,-368],\"params\":[\"Inherit\",\"False\",\"0\",\"1\",\"FLOAT4x4\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.ObjectToWorldMatrixNode,
+    AmplifyShaderEditor\",\"id\":11,\"pos\":[-640,-272],\"params\":[\"Inherit\",\"False\",\"0\",\"1\",\"FLOAT4x4\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.CustomExpressionNode,
+    AmplifyShaderEditor\",\"id\":5,\"pos\":[-320,-144],\"params\":[\"Inherit\",\"False\",\"GetDeformationFromSphereCasts(worldToObject,
+    objectToWorld, localPosition, localNormal);\",\"1\",\"Call\",\"4\",\"True\",\"worldToObject\",\"FLOAT4x4\",\"1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1\",\"In\",\"\",\"Inherit\",\"False\",\"True\",\"objectToWorld\",\"FLOAT4x4\",\"1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1\",\"In\",\"\",\"Inherit\",\"False\",\"True\",\"localPosition\",\"FLOAT3\",\"0,0,0\",\"InOut\",\"\",\"Inherit\",\"False\",\"True\",\"localNormal\",\"FLOAT3\",\"0,0,0\",\"InOut\",\"\",\"Inherit\",\"False\",\"GetDeformationFromSphereCasts\",\"False\",\"False\",\"0\",\"\",\"False\",\"\",\"5\",\"0\",\"FLOAT\",\"0\",\"False\",\"1\",\"FLOAT4x4\",\"1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1\",\"False\",\"2\",\"FLOAT4x4\",\"1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1\",\"False\",\"3\",\"FLOAT3\",\"0,0,0\",\"False\",\"4\",\"FLOAT3\",\"0,0,0\",\"False\",\"3\",\"FLOAT\",\"0\",\"FLOAT3\",\"4\",\"FLOAT3\",\"5\"]}\n{\"type\":\"AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor\",\"id\":0,\"pos\":[288,-176],\"params\":[\"Inherit\",\"False\",\"True\",\"-1\",\"Vertex
+    Position\",\"0\",\"False\",\"1\",\"0\",\"FLOAT3\",\"0,0,0\",\"False\",\"1\",\"FLOAT3\",\"0\"]}\n{\"type\":\"AmplifyShaderEditor.FunctionOutput,
+    AmplifyShaderEditor\",\"id\":7,\"pos\":[288,-80],\"params\":[\"Inherit\",\"False\",\"False\",\"-1\",\"Vertex
+    Normal\",\"1\",\"False\",\"1\",\"0\",\"FLOAT3\",\"0,0,0\",\"False\",\"1\",\"FLOAT3\",\"0\"]}\n{\"wire\":[1,0,4,0]}\n{\"wire\":[2,0,3,0]}\n{\"wire\":[9,1,1,0]}\n{\"wire\":[9,0,5,4]}\n{\"wire\":[10,1,2,0]}\n{\"wire\":[10,0,5,5]}\n{\"wire\":[5,1,6,0]}\n{\"wire\":[5,2,11,0]}\n{\"wire\":[5,3,1,0]}\n{\"wire\":[5,4,2,0]}\n{\"wire\":[0,0,9,0]}\n{\"wire\":[7,0,10,0]}\nASEEND*/\n//CHKSM=6C8B6DFC3BACDC19741F48FD106F989EB91EC1AA"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives:
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_directivesSaveItems:
+    - LineType: 0
+      LineValue: Packages/com.gator-dragon-games.spherecast/SphereCast.cginc
+      GUIDToggle: 0
+      GUIDValue: 
+      ShowConditionals: 0
+      VersionMin: 0
+      VersionMax: 0
+      Passes: 
+      Origin: 2
+    m_versionMaxExclusive: 1
+  m_nodeCategory: 3
+  m_headerStyle: 0
+  m_headerColor: {r: 1, g: 0.4, b: 0, a: 1}
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 
